@@ -1,17 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<div class="container m-4">
   <form (submit)="addNewTodo()">
     <div class="form-group">
       <input [(ngModel)]="description" type="text" name="description" class="form-control" placeholder="Crear ToDo">
     </div>
-    <input class="btn btn-primary" type="submit"value="Add TODO">
+    <input class="btn btn-primary" type="submit" value="Add TODO">
   </form>
 </div>
 
-<div>
+<div class="container m-4">
   <ul class="list-group">
-    <li class="list-group-item" [class.is-done]="todo.isDone" *ngFor="let todo of todos" (click)="todo.isDone = !todo.isDone">
+    <li class="list-group-item" [class.is-done]="todo.isDone" *ngFor="let todo of todos" >
       {{todo.description}}
+      <input type="button" value="Listo" (click)="todo.isDone = !todo.isDone">
+      <input type="button" value="Eliminar" (click)="deleteTodo(todo)">
     </li>
   </ul>
 </div>
