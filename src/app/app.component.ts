@@ -19,8 +19,6 @@ export class AppComponent {
       isDone : false
     })
     this.description = null;
-
-    console.log(this.todos)
   }
   deleteTodo(indice){     
    const index = this.todos.indexOf(indice) ;

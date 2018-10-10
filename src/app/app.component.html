@@ -10,10 +10,10 @@
 
 <div class="container m-4">
   <ul class="list-group">
-    <li class="list-group-item" [class.is-done]="todo.isDone" *ngFor="let todo of todos" >
+    <li class="list-group-item" [class.is-done]="todo.isDone" *ngFor="let todo of todos">
       {{todo.description}}
-      <input type="button" value="Listo" (click)="todo.isDone = !todo.isDone">
-      <input type="button" value="Eliminar" (click)="deleteTodo(todo)">
+        <input type="button" class="btn btn-dark m-4" value="Listo" (click)="todo.isDone = !todo.isDone">
+        <input type="button" class="btn btn-dark" value="Eliminar" (click)="deleteTodo(todo)">
     </li>
   </ul>
 </div>
